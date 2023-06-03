@@ -148,7 +148,7 @@ body {
   padding-bottom: 24px;
   position: relative;
   display: block;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link::after {
@@ -158,10 +158,9 @@ body {
   bottom: -1px;
   width: 100%;
   height: 4px;
-  border-radius: 2px;  
+  border-radius: 2px;
   background-color: var(--action-color);
   transform: scalex(0);
-
 }
 .menu-link.current {
   color: var(--action-color);
@@ -177,8 +176,7 @@ body {
   margin-left: auto;
 }
 
-.menu-mail,
-.menu-tel {
+.menu-mail .menu-tel {
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
@@ -253,13 +251,13 @@ body {
   background-color: var(--primary-brand);
   letter-spacing: 0.04em;
   border: none;
-  transition background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-title:hover,
 .btn-title:focus {
   background: var(--action-color);
-  }
+}
 
 .btn-title
 
@@ -392,7 +390,7 @@ body {
   height: 100%;
   background-color: var(--primary-brand);
   border-radius: 50%;
-  transition background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -434,7 +432,8 @@ body {
   border: 1px solid var(--subtitle-text);
   border-radius: 4px;
   color: var(--subtitle-text);
-  transition border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cust-link:hover,
@@ -518,8 +517,7 @@ body {
   height: 100%;
   background-color: var(--primary-brand);
   border-radius: 50%;
-  transition background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-media {
@@ -550,7 +548,10 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -564,12 +565,18 @@ body {
 
 .card-item {
   display: block;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .card-item:hover,
 .card-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.card-item:hover.application-text,
+.card-item:focus.application-text {
+  transform: translateY(0%);
 }
 
 .menu-text {
@@ -636,41 +643,47 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
+  color: var(--cloud);
   background-color: var(--primary-brand);
   padding: 40px 32px 164px;
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms linear;
-  }
+}
 
-  .cover-text:hover,
-  .cover-text:focus  {  
+.cover-text:hover,
+.cover-text:focus {
   transform: translateY(0%);
-  }
+}
 
 .backdrop {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
+
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   position: absolute;
+  width: 24px;
+  height: 24px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
-  transition transform: 250ms linear;
   width: 408px;
   min-height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -683,17 +696,29 @@ body {
   border-radius: 50%;
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  display: block;
-  margin-left: auto;
+  margin-right: 24px;
+  margin-top: 24px;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
-.close-btn:focus{
-background-color:#404bbf;
+.close-btn:focus {
+  border: none;
+  background-color: #404bbf;
 }
 
 .is-hidden {
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.modal-close-icon {
+  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
