@@ -16,10 +16,6 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
   </head>
   <body>
     <!------------------------- header --------------------------------->
@@ -64,7 +60,7 @@
       <section class="section-hero">
         <div class="container hero-wrap">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="btn-title animate_animated">
+          <button type="button" class="btn-title" data-modal-open>
             Order Service
           </button>
         </div>
@@ -432,7 +428,15 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop"></div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
