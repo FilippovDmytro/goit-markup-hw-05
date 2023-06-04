@@ -202,11 +202,6 @@ body {
   color: var(--action-color);
 }
 
-.menu-tel {
-  margin-left: 40px;
-  margin-right: 156;
-}
-
 /* -------HERO SECTION----------------------- */
 
 .section-hero {
@@ -730,4 +725,7 @@ body {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+.modal-close-icon {
+  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
