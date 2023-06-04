@@ -9,7 +9,7 @@
   --accent-color: #e7e9fc;
   --green: #31d0aa;
   --dairy: #fcfcfc;
-
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --card-set-gap: 24px;
 }
 h1,
@@ -175,10 +175,17 @@ body {
   font-style: normal;
   margin-left: auto;
 }
-.mail-item {
+
+.menu-mail {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-mail .menu-tel {
+.menu-tel {
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
@@ -576,8 +583,8 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.card-item:hover.application-text,
-.card-item:focus.application-text {
+.card-item:hover.cover-text,
+.card-item:focus.cover-text {
   transform: translateY(0%);
 }
 
@@ -598,8 +605,11 @@ body {
 .cards {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.card-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.cards:hover .cover-text {
+.card-item:hover.cover-text .card-item:focus.cover-text {
   transform: translateY(0);
   transition: transform 250ms linear;
 }
@@ -713,18 +723,11 @@ body {
 .close-btn:focus {
   border: none;
   background-color: #404bbf;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-}
-
-.modal-close-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-close-icon:hover,
-.modal-close-icon:focus {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
