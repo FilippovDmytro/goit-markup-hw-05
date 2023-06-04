@@ -655,14 +655,14 @@ body {
   letter-spacing: 0.02em;
   color: var(--cloud);
   background-color: var(--primary-brand);
-  padding: 40px 32px 164px;
+  padding: 40px 32px;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-item:hover.cover-text,
-.card-item:focus.cover-text {
+.card-item:hover .cover-text,
+.card-item:focus .cover-text {
   transform: translateY(0%);
 }
 
@@ -715,10 +715,12 @@ body {
 }
 
 .close-btn:hover,
-.close-btn:focus {
+.close-btn:focus,
+.close-btn:hover .modal-close-icon,
+.close-btn:focus .modal-close-icon {
   border: none;
   background-color: #404bbf;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #ffffff;
 }
 
 .is-hidden {
@@ -727,5 +729,5 @@ body {
   pointer-events: none;
 }
 .modal-close-icon {
-  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
